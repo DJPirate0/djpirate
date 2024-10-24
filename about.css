@@ -224,15 +224,22 @@
     margin-left: 25px;
   }
   #para{
+    margin-left: 25px;
+    margin-right: 25px;
     margin-top: 25px;
     font-size: medium;
   }
   #para2{
+    margin-left: 25px;
+    margin-right: 25px;
     margin-top: 25px;
     font-size: medium;
   }
   #points{
     font-size: small;
+    text-align: none;
+    margin-left: 25px;
+    margin-right: 25px;
   }
   #point1{
     margin-left: 25px;
