@@ -40,6 +40,9 @@
     color: rgb(185, 184, 184);
     font-weight: 500;
   }
+#back-text:hover{
+    color: white;
+  }
   #content{
     margin-top: 15px;
     border: none;
