@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  body{
+    user-select: none;
+    background: linear-gradient(to right, #1e1e1e, #2c3e50);
+    font-family: 'Poppins', sans-serif;
+    animation: blur 0.8s ease;
+  }
+  @keyframes blur{
+    from{ filter: blur(15px);}
+    to{ filter: blur(0);}
+  }
+.custom-cursor {
+  cursor: url('https://th.bing.com/th/id/OIP.-cTpO7zBXmXg0GzvbLgc_wAAAA?rs=1&pid=ImgDetMain'), auto;
+}
+  #back-button{
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+    border: 2px solid rgb(185, 184, 184);
+    border-radius: 10px;
+    width: 95px;
+    height: 40px;
+    color: white;
+    margin-left: 0.5%;
+    margin-top: 0.6%;
+    transition: all 0.3s ease;
+  }
+  #back-button:hover{
+    border: 2px solid white;
+  }
+  #back-text{
+    text-shadow: 0px 10px 20px black;
+    color: rgb(185, 184, 184);
+    font-weight: 500;
+  }
+  #content{
+    border: none;
+    animation: startbro 0.8s;
+  }
+  @keyframes startbro{
+    from{
+        margin-top: -200px;
+        opacity: 0;
+        transform: rotateX(-180deg);
+    }
+    to{
+        margin-top: 15px;
+        opacity: 1;
+        transform: rotateX(0);
+    }
+  }
+  #main{
+    text-shadow: 0px 10px 20px black;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 800;
+    color: #fff;
+    animation: bla-bla 2.5s ease;
+  }
+  @keyframes bla-bla{
+    from{ opacity: 0;}
+    to{ opacity: 100;}
+  }
+  #line{
+    border-color: rgba(185, 184, 184, 0.438);
+    margin-left: 530px;
+    margin-right: 530px;
+    margin-top: -12px;
+    animation: line 1.5s ease-in-out;
+  }
+@keyframes line{
+  from{
+    margin-left: 600px;
+    margin-right: 600px;
+  }
+  to{
+    margin-left: 530px;
+    margin-right: 530px;
+  }
+}
+#para{
+  text-shadow: 0px 10px 20px black;
+    font-weight: 800;
+    color: rgb(185, 184, 184);
+    font-size: large;
+    margin-top: 65px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#para2{
+    text-shadow: 0px 10px 20px black;
+      font-weight: 800;
+      color: rgb(185, 184, 184);
+      font-size: large;
+      margin-top: 25px;
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+#heading{
+    text-shadow: 0px 10px 20px black;
+    margin-top: 35px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    color: #fff;
+}
+#heading1{
+  text-shadow: 0px 10px 20px black;
+  margin-top: 35px;
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-left: 25px;
+  color: #fff;
+}
+#points-list .point,
+#info-list .info{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 8px 4px !important;
+  border-radius: 0 !important;
+  font-weight: 400 !important;
+  color: #122233 !important;
+  line-height: 1.5 !important;
+  position: relative;
+  transition: color .18s ease !important;
+}
+
+#points-list .point:not(:last-child),
+#info-list .info:not(:last-child){
+  border-bottom: 1px solid rgba(16,24,40,0.06) !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+#points-list .point::after,
+#info-list .info::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #0b5fff;
+  transition: width .18s ease;
+  border-radius: 2px;
+}
+
+#points-list .point:hover,
+#info-list .info:hover{
+  color: #0b4be6 !important;
+}
+#points-list .point:hover::after,
+#info-list .info:hover::after{
+  width: 28px
+}
+
+#tola{
+  text-decoration: none;
+  position: relative;
+}
+#tola::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background: #0b5fff;
+  transition: width .18s ease;
+}
+#tola:hover::after{ width: 100%; }
+
+@media (max-width: 420px){
+  #points-list .point,
+  #info-list .info{
+     padding: 10px 0 !important;
+  }
+}
+#botn{
+  margin-top: 50px;
+  border: none;
+  user-select: none;
+  background-color: transparent;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(185, 184, 184);
+  font-weight: 600;
+  font-size: large;
+  display: block;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.836);
+  transition: all 0.3s ease-in-out;
+}
+#botn:hover{
+  color: #cfcfcf;
+}
+@media (max-width: 425px) {
+  #back-button{
+    margin-top: 5px;
+    margin-left: 3px;
+    height: 35px;
+    width: 75px;
+  }
+  #back-text{
+    font-size: small;
+  }
+  #main{
+    font-size: larger;
+  }
+  #heading{
+    font-weight: 500;
+    font-size: larger;
+  }
+  #heading1{
+    font-weight: 500;
+    font-size: larger;
+    margin-left: 25px;
+  }
+  #para{
+    margin-top: 25px;
+    font-size: medium;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #para2{
+    margin-top: 25px;
+    font-size: medium;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #points{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #point1{
+    margin-left: 25px;
+  }
+  #point12{
+    margin-left: 2px;
+    display: inline-block;
+    margin-top: 25px;
+  }
+  #point123{
+    margin-left: 25px;
+    display: inline-block;
+    margin-top: 25px;
+  }
+  #M{
+    font-size: small;
+  }
+  #line{
+    margin-top: -15px;
+    margin-left: 24.5%;
+    margin-right: 24.5%;
+    animation: line 1.5s ease-in-out;
+  }
+@keyframes line{
+  from{
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+  to{
+    margin-left: 24.5%;
+    margin-right: 24.5%;
+  }
+}
+}
