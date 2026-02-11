@@ -129,16 +129,23 @@
   padding: 8px 4px !important;
   border-radius: 0 !important;
   font-weight: 400 !important;
-  /* CHANGE: Use a lighter color so it's visible on dark backgrounds */
-  color: #e0e0e0 !important; 
+  /* FIX: Changed from dark blue to your requested light grey */
+  color: rgb(185, 184, 184) !important; 
   line-height: 1.5 !important;
   position: relative;
   transition: color .18s ease !important;
-  /* Fix for mobile tap highlight */
+  /* Removes the blue highlight box on mobile tap */
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Base line state (Invisible) */
+#points-list .point:not(:last-child),
+#info-list .info:not(:last-child) {
+  /* Slightly lighter border to match the new text color */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 8px !important;
+}
+
 #points-list .point::after,
 #info-list .info::after {
   content: "";
@@ -147,35 +154,20 @@
   bottom: 0;
   height: 2px;
   width: 0;
-  background: #0b5fff;
+  background: #0b5fff; /* The blue line from your screenshot */
   transition: width .18s ease;
   border-radius: 2px;
 }
 
-/* Use Media Query to only apply Hover on devices that actually have a mouse */
-@media (hover: hover) {
-  #points-list .point:hover,
-  #info-list .info:hover {
-    color: #0b4be6 !important;
-  }
-  #points-list .point:hover::after,
-  #info-list .info:hover::after {
-    width: 28px;
-  }
+/* Hover Effect (For PC/Mouse) */
+#points-list .point:hover,
+#info-list .info:hover {
+  color: #0b4be6 !important; /* The bright blue hover text */
 }
 
-/* Active/Touch state for Mobile so it feels responsive when tapped */
-#points-list .point:active,
-#info-list .info:active {
-  color: #0b4be6 !important;
-}
-
-#points-list .point:not(:last-child),
-#info-list .info:not(:last-child) {
-  /* CHANGE: Lighten the border so it doesn't look like a dark smudge */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  margin-bottom: 8px !important;
-  padding-bottom: 8px !important;
+#points-list .point:hover::after,
+#info-list .info:hover::after {
+  width: 28px; /* The blue underline effect */
 }
 #tola{
   text-decoration: none;
@@ -304,3 +296,4 @@
   }
 
 }
+
