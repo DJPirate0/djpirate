@@ -179,7 +179,24 @@
   transition: width .18s ease;
 }
 #tola:hover::after{ width: 100%; }
-
+#botn{
+  margin-top: 50px;
+  border: none;
+  user-select: none;
+  background-color: transparent;
+  display: block;
+  margin-left: 5px;
+  margin-right: auto;
+  color: rgb(185, 184, 184);
+  font-weight: 600;
+  font-size: medium;
+  display: block;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.836);
+  transition: all 0.3s ease-in-out;
+}
+#botn:hover{
+  color: white;
+}
 @media (max-width: 420px){
   #points-list .point,
   #info-list .info{
@@ -196,15 +213,14 @@
   margin-right: auto;
   color: rgb(185, 184, 184);
   font-weight: 600;
-  font-size: large;
+  font-size: small;
   display: block;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.836);
   transition: all 0.3s ease-in-out;
 }
 #botn:hover{
-  color: #cfcfcf;
+  color: white;
 }
-@media (max-width: 425px) {
   #back-button{
     margin-top: 5px;
     margin-left: 3px;
@@ -273,5 +289,4 @@
     margin-left: 24.5%;
     margin-right: 24.5%;
   }
-}
 }
