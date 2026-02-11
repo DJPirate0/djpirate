@@ -122,28 +122,25 @@
   color: #fff;
 }
 #points-list .point,
-#info-list .info{
+#info-list .info {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   padding: 8px 4px !important;
   border-radius: 0 !important;
   font-weight: 400 !important;
-  color: #122233 !important;
+  /* CHANGE: Use a lighter color so it's visible on dark backgrounds */
+  color: #e0e0e0 !important; 
   line-height: 1.5 !important;
   position: relative;
   transition: color .18s ease !important;
+  /* Fix for mobile tap highlight */
+  -webkit-tap-highlight-color: transparent;
 }
 
-#points-list .point:not(:last-child),
-#info-list .info:not(:last-child){
-  border-bottom: 1px solid rgba(16,24,40,0.06) !important;
-  margin-bottom: 8px !important;
-  padding-bottom: 8px !important;
-}
-
+/* Base line state (Invisible) */
 #points-list .point::after,
-#info-list .info::after{
+#info-list .info::after {
   content: "";
   position: absolute;
   left: 0;
@@ -155,15 +152,31 @@
   border-radius: 2px;
 }
 
-#points-list .point:hover,
-#info-list .info:hover{
-  color: #0b4be6 !important;
-}
-#points-list .point:hover::after,
-#info-list .info:hover::after{
-  width: 28px
+/* Use Media Query to only apply Hover on devices that actually have a mouse */
+@media (hover: hover) {
+  #points-list .point:hover,
+  #info-list .info:hover {
+    color: #0b4be6 !important;
+  }
+  #points-list .point:hover::after,
+  #info-list .info:hover::after {
+    width: 28px;
+  }
 }
 
+/* Active/Touch state for Mobile so it feels responsive when tapped */
+#points-list .point:active,
+#info-list .info:active {
+  color: #0b4be6 !important;
+}
+
+#points-list .point:not(:last-child),
+#info-list .info:not(:last-child) {
+  /* CHANGE: Lighten the border so it doesn't look like a dark smudge */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  margin-bottom: 8px !important;
+  padding-bottom: 8px !important;
+}
 #tola{
   text-decoration: none;
   position: relative;
@@ -289,4 +302,5 @@
     margin-left: 24.5%;
     margin-right: 24.5%;
   }
+
 }
